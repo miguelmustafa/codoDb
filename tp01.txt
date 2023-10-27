@@ -1,0 +1,32 @@
+DROP TABLE alumno;
+
+CREATE TABLE alumno (
+	id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	nombre VARCHAR(40) NOT NULL COLLATE 'latin1_swedish_ci',
+	apellido VARCHAR(40) NOT NULL COLLATE 'latin1_swedish_ci',
+	edad TINYINT(2) NOT NULL,
+	fecha TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	provincia VARCHAR(30) NOT NULL COLLATE 'latin1_swedish_ci'
+	
+);
+
+INSERT INTO alumno (nombre, apellido, edad, provincia)
+select 'seiya','pegaso',14,'misiones';
+
+INSERT INTO alumno (nombre, apellido, edad, provincia)
+select 'ikki','fenix',15,'corrientes';
+
+INSERT INTO alumno (nombre, apellido, edad, provincia)
+select 'shun','andromeda',14,'mendoza';
+
+INSERT INTO alumno (nombre, apellido, edad, provincia)
+select 'hyoga','cisne',14,'misiones';
+
+INSERT INTO alumno (nombre, apellido, edad, provincia)
+select 'shiryu','dragon',14,'salta';
+
+-----------cd C:\Program Files\MySQL\MySQL Server 8.1\bin
+
+mysqldump -u root -p tpcodo > "C:\_REPOSITORIO_MIO\codo\bd\tp01\backuptpmodo.sql"
+
+
